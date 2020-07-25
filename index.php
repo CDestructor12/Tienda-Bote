@@ -1,10 +1,6 @@
 <?php
     include('php/pcabeza.php');
 ?>
-<!-- Opciones de Navegación -->
-<ol class="breadcrumb">
-    <li><a href="#">Inicio</a></li>
-</ol>
 
 <!-- Inicio de Panel de Detalles -->
 <div class="panel panel-default" style="margin-top: 10 px">
