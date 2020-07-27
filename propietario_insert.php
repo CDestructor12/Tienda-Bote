@@ -16,7 +16,7 @@
     <div class="panel-body">
         <div class="container" style="width: 450px;">
             <div class="col-6 ml-4">
-                <div class="myform form ">
+                <div class="myform form">
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
