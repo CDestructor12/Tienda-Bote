@@ -14,7 +14,7 @@
     </div>
     <div class="panel-body">
         <p>
-            <a href="#" class="btn btn-success pull-left"> Nuevo </a>
+            <a href="propietario_insert.php" class="btn btn-success pull-left"> Nuevo </a>
         </p>
         <br>
         <hr>
