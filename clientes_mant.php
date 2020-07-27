@@ -1,5 +1,30 @@
 <?php
     include('php/pcabeza.php');
+
+    $mensaje = '';
+    $color = '';
+
+    if (isset($_GET['s'])){
+        switch ($_GET['s']) {
+            case 'successdlt':
+                $mensaje = 'Registro inabilitado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errordlt':
+                $mensaje = 'Imposible inhabilitar el registro';
+                $color = 'danger';
+                break;
+        }
+    }
+
+    if (!empty($mensaje) and !empty($color)) {
+        //echo'<div class="alert alert-'.$color.'" role="alert">'.$mensaje .'</div> ';
+        echo'<div class="alert alert-'.$color.'" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <span>'.$mensaje.'</span>
+        </div>';
+    }
 ?>
 <!-- Opciones de Navegación -->
 <ol class="breadcrumb">
