@@ -12,12 +12,44 @@ if (isset($_GET['id'])) {
     $codigo = $_GET['id'];
 }
 
-if ($i == 'DLT') {    
+if ($i == 'INS'){
+    $msj='';
+    $nombre=    $_POST['nombre'];
+    $direccion= $_POST['direccion'];
+    $telefono=  $_POST['telefono'];
+    $fecha_nacimiento=  $_POST['fechaN'];
+    $experiencia=   $_POST['experiencia'];
+
     $sql="
-    UPDATE `propietario` SET
-    `estado` = 'I'
-    WHERE `codpropietario` = '$codigo'
+        INSERT INTO `propietario`
+        (
+            `nombre`, 
+            `direccion`, 
+            `telefeno`, 
+            `fecha_nacimiento`, 
+            `experiencia`, 
+            `estado`
+        ) VALUES (
+            '$nombre',
+            '$direccion',
+            '$telefono',
+            '$fecha_nacimiento',
+            '$experiencia',
+            'A'
+        ) 
     ";
+
+    if ($mysqli->query($sql)) {
+        $msj ='successins';
+    } else {
+        $msj ='errorins';
+    }
+
+    header("Location: ../../propietario_mant.php?s=".$msj);
+}
+
+if ($i == 'DLT') {    
+    $sql="UPDATE `propietario` SET `estado` = 'I' WHERE `codpropietario` = '$codigo' ";
 
     if ($mysqli->query($sql)) {
         $msj ='successdlt';

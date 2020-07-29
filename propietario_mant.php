@@ -15,6 +15,16 @@
                 $mensaje = 'Imposible inhabilitar el registro';
                 $color = 'danger';
                 break;
+                
+            case 'successins':
+                $mensaje = 'Registro almacenado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errorins':
+                $mensaje = 'Imposible almacenar el registro';
+                $color = 'danger';
+                break;
         }
     }
 
