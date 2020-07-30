@@ -15,6 +15,26 @@
                 $mensaje = 'Imposible inhabilitar el registro';
                 $color = 'danger';
                 break;
+                
+            case 'successins':
+                $mensaje = 'Registro almacenado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errorins':
+                $mensaje = 'Imposible almacenar el registro';
+                $color = 'danger';
+                break;
+            
+            case 'successudt':
+                $mensaje = 'Registro actualizado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errorudt':
+                $mensaje = 'Imposible actualizar el registro';
+                $color = 'danger';
+                break;
         }
     }
 
@@ -39,7 +59,7 @@
     </div>
     <div class="panel-body">
         <p>
-            <a href="#" class="btn btn-success pull-left"> Nuevo </a>
+            <a href="equipos_insert.php" class="btn btn-success pull-left"> Nuevo </a>
         </p>
         <br>
         <hr>
@@ -62,17 +82,13 @@
                                 <td>".$row['codtipo_equipo']."</td>
                                 <td>".$row['descripcion']."</td>
                                 <td>".$row['estado']."</td>
-                                <td> <a data-toggle='tooltip' title='Editar' href='#' class='btn btn-primary'> <img src='img/editar.png' width=34px /> </a> </td>
-                                <td> <a data-toggle='tooltip' title='Anular' href='php/registros/tipos_equipo.php?accion=DLT&id=".$row['codtipo_equipo']."' class='btn btn-danger'> <img src='img/basura.png' width=34px /> </a></td>
+                                <td> <a data-toggle='tooltip' title='Editar' href='equipos_update.php?id=".base64_encode($row['codtipo_equipo'])."' class='btn btn-primary'> <img src='img/editar.png' width=34px /> </a> </td>
+                                <td> <a data-toggle='tooltip' title='Anular' href='php/registros/tipos_equipo.php?accion=DLT&id=".base64_encode($row['codtipo_equipo'])."' class='btn btn-danger'> <img src='img/basura.png' width=34px /> </a></td>
                         ";
                     }
                 ?>
-
-
             </tbody>
-
         </table>
-
     </div>
 </div> <!-- Fin del Panel -->
 

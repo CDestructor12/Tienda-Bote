@@ -15,6 +15,26 @@
                 $mensaje = 'Imposible inhabilitar el registro';
                 $color = 'danger';
                 break;
+                
+            case 'successins':
+                $mensaje = 'Registro almacenado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errorins':
+                $mensaje = 'Imposible almacenar el registro';
+                $color = 'danger';
+                break;
+            
+            case 'successudt':
+                $mensaje = 'Registro actualizado correctamente';
+                $color = 'success';
+                break;
+            
+            case 'errorudt':
+                $mensaje = 'Imposible actualizar el registro';
+                $color = 'danger';
+                break;
         }
     }
 
@@ -39,7 +59,7 @@
     </div>
     <div class="panel-body">
         <p>
-            <a href="#" class="btn btn-success pull-left"> Nuevo </a>
+            <a href="clientes_insert.php" class="btn btn-success pull-left"> Nuevo </a>
         </p>
         <br>
         <hr>
@@ -49,6 +69,7 @@
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Dirección</th>
+                    <th>Telefono</th>
                     <th>Estado</th>
                     <th></th>
                     <th></th>
@@ -63,18 +84,15 @@
                                 <td>".$row['codcliente']."</td>
                                 <td>".$row['nombre']."</td>
                                 <td>".$row['direccion']."</td>
+                                <td>".$row['telefono']."</td>
                                 <td>".$row['estado']."</td>
-                                <td> <a data-toggle='tooltip' title='Editar' href='#' class='btn btn-primary'> <img src='img/editar.png' width=34px /> </a> </td>
-                                <td> <a data-toggle='tooltip' title='Anular' href='php/registros/clientes.php?accion=DLT&id=".$row['codcliente']."' class='btn btn-danger'> <img src='img/basura.png' width=34px /> </a></td>
+                                <td> <a data-toggle='tooltip' title='Editar' href='clientes_update.php?id=".base64_encode($row['codcliente'])."' class='btn btn-primary'> <img src='img/editar.png' width=34px /> </a> </td>
+                                <td> <a data-toggle='tooltip' title='Anular' href='php/registros/clientes.php?accion=DLT&id=".base64_encode($row['codcliente'])."' class='btn btn-danger'> <img src='img/basura.png' width=34px /> </a></td>
                         ";
                     }
                 ?>
-
-
             </tbody>
-
         </table>
-
     </div>
 </div> <!-- Fin del Panel -->
 
