@@ -5,7 +5,7 @@
 <ol class="breadcrumb">
     <li><a href="./">Inicio</a></li>
     <li><a href="propietario_mant.php">Listado de Propietarios</a></li>
-    <li class="active">Nuevo Propietarios</li>
+    <li class="active">Nuevo Propietario</li>
 </ol>
 
 <!-- Inicio de Panel de Detalles -->

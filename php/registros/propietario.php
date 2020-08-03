@@ -23,10 +23,10 @@ if ($i == 'INS'){
     $sql="
         INSERT INTO `propietario`
         (
-            `nombre`, 
-            `direccion`, 
-            `telefono`, 
-            `fecha_nacimiento`, 
+            `nombre`,
+            `direccion`,
+            `telefono`,
+            `fecha_nacimiento`,
             `experiencia`, 
             `estado`
         ) VALUES (

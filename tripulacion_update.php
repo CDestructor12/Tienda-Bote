@@ -7,13 +7,13 @@
 <ol class="breadcrumb">
     <li><a href="./">Inicio</a></li>
     <li><a href="tripulacion_mant.php">Listado de Tripulaciónes</a></li>
-    <li class="active">Nueva Tripulacion</li>
+    <li class="active">Actualizar Tripulacion</li>
 </ol>
 
 <!-- Inicio de Panel de Detalles -->
 <div class="panel panel-default" style="margin-top: 10 px">
     <div class="panel-heading">
-        <h1>Nueva Tripulacion</h1>
+        <h1>Actualizar Tripulacion</h1>
     </div>
 
     <div class="panel-body">

@@ -96,4 +96,20 @@ if ($i == 'DLT') {
     header("Location: ../../clientes_mant.php?s=".$msj);
 }
 
+if ($i == 'JUANMA'){
+    $sql="
+    UPDATE `clientes` SET
+    `nombre` = 'JUANMA CANAHUATE'
+    WHERE `codcliente` = '$codigo'
+    ";
+
+    if ($mysqli->query($sql)) {
+        $msj ='successdlt';
+    } else {
+        $msj ='errordlt';
+    }
+
+    header("Location: ../../clientes_mant.php?s=".$msj);
+}
+
 ?>
